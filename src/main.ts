@@ -8,6 +8,8 @@ import { sequelize } from './config/database.config';
 async function start(){
     try {
         await sequelize.authenticate();
+        await sequelize.sync();
+        console.info("base de datos conectada");
 
         const PORT = ENV.PORT;
 

@@ -9,7 +9,7 @@ export const sequelize = new Sequelize(
     {
         host: ENV.PGHOST,
         port: Number(ENV.PGPORT),
-        logging: false,
+        logging: true,
         dialect: 'postgres',
         define: {
             timestamps: true,
