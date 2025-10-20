@@ -1,18 +1,31 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import router from './config/server.routes';
-import  dotenv from 'dotenv';
+import { ENV } from './config/env.config';
+import { sequelize } from './config/database.config';
 
-dotenv.config();
 
-const PORT = process.env.PORT || 3000;
+async function start(){
+    try {
+        await sequelize.authenticate();
+        await sequelize.sync();
+        console.info("base de datos conectada");
 
-const app = express();
+        const PORT = ENV.PORT;
 
-app.use(bodyParser.json());
+        const app = express();
 
-app.use('/', router)
+        app.use(bodyParser.json());
 
-app.listen(PORT, () => {
-    console.log("Server is running on port " + PORT);
-});
+        app.use('/', router)
+
+        app.listen(PORT, () => {
+            console.log("Server is running on port " + PORT);
+        });
+    } catch (error) {
+        console.error("Error in server:", error);
+    }
+
+}
+
+start();
