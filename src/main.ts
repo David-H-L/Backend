@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import router from './config/server.routes';
 import { ENV } from './config/env.config';
 import { sequelize } from './config/database.config';
+import './modules/vote/models/vote.model'; // fix solocarga los modelos con esto!
 
 
 async function start(){

@@ -1,6 +1,6 @@
 export interface ICreateVote {
     name: string,
-    date: string,
+    date: Date,
     count: number,
     finished: boolean
 }

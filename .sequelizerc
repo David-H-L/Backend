@@ -1,6 +1,6 @@
 const path = require('path');
 require('dotenv').config();
-
+console.info("ingreso al sequealizerc")
 module.exports = {
   env: process.env.NODE_ENV || 'development',
   config: path.resolve('db/config/config.js'),
