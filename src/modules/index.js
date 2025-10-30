@@ -1,7 +1,7 @@
 'use strict';
 
 require('ts-node/register');
-console.info("ejecutndo modelos para carga ...");
+console.info("conectando con las migraciones ...");
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
