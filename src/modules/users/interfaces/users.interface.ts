@@ -19,7 +19,7 @@ export interface IUser {
     password: string;
 }
 
-export interface IUserModel {
+export interface IUserFilter {
     firstName?: string;
     lastName?: string;
     email?: string;
