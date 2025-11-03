@@ -9,7 +9,7 @@ import {
   getUserProfile,
 } from './users.controller';
 import { validateSesionUser } from '../../middleware/userSesion.middleware';
-import { userRoleValidation } from '../../middleware/userRole.middleware';
+import { userRoleValidation } from '../../middleware/userRol.middleware';
 import { UserRole } from './interfaces/users.interface';
 
 const UserRouter = Router();
