@@ -13,4 +13,8 @@ export const ENV = {
     PGDATA: process.env.PGDATA || '/var/lib/postgresql/data/pgdata',
     PGHOST: process.env.PGHOST || 'localhost',
     PGPORT: process.env.PGPORT || '5433',
+    // new data
+    JWT_SECRET: process.env.JWT_SECRET || 'asdfg',
+    SALTS: process.env.SALTS || '10' // default salts
+    
 }

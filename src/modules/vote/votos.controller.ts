@@ -5,7 +5,7 @@ import {
     getVotoByIdService,
     updateVotoService,
     deleteVotoService
-} from "./votos.services";
+} from "./votos.service";
 
 import { IVoteFilter } from "./interfaces/votes.interface"; 
 
