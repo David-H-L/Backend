@@ -15,6 +15,7 @@ export const ENV = {
     PGPORT: process.env.PGPORT || '5433',
     // new data
     JWT_SECRET: process.env.JWT_SECRET || 'asdfg',
-    SALTS: process.env.SALTS || '10' // default salts
+    SALTS: process.env.SALTS || '10', // default salts
+    SOCKETIO_PORT: process.env.SOCKETIO_PORT || '3001',
     
 }
